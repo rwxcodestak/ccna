@@ -1,4 +1,4 @@
-# ccna
+# ccna networking studies 2026
 ccna-notes
 
 ---
