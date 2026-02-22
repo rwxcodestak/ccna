@@ -1,5 +1,6 @@
-# ccna networking studies 2026
+# CCNA Networking Studies 2026
 - ccna study notes - RSTP
+- ccna EIGRP
 
 ---
 
