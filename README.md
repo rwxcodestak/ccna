@@ -1,6 +1,10 @@
 # CCNA Networking Studies 2026
 
 - STP
+    - BPDU
+    - Loop Guard
+    - Portfast
+    - Root Guard
 - ccna study notes - RSTP
 - ccna EIGRP
 
