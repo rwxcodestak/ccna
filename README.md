@@ -5,6 +5,8 @@
     - Loop Guard
     - Portfast
     - Root Guard
+    - RTSP Lab
+    - PVSTP
 - ccna study notes - RSTP
 - ccna EIGRP
 
