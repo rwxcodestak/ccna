@@ -9,6 +9,7 @@
     - PVSTP
     - Port Priority
     - Redundancy
+    - Forwarding
 - ccna study notes - RSTP
 - ccna EIGRP
 
