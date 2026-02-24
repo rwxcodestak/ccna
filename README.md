@@ -7,6 +7,8 @@
     - Root Guard
     - RTSP Lab
     - PVSTP
+    - Port Priority
+    - Redundancy
 - ccna study notes - RSTP
 - ccna EIGRP
 
