@@ -1,9 +1,10 @@
 # CCNA Networking Studies 2026
 
 - STP and RSTP
+    - Portfast
     - BPDU
     - Loop Guard
-    - Portfast
+    - BPDU Guard
     - Root Guard
     - RTSP Lab
     - PVSTP
@@ -14,6 +15,9 @@
     - Blocking
     - Designated
     - Alternate
+    - Root Cost
+    - Bridge Priority
+    - Broadcast STorms
 - ccna study notes - RSTP
 - ccna EIGRP
 
