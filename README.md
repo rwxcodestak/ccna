@@ -1,6 +1,6 @@
 # CCNA Networking Studies 2026
 
-- STP and RSTP
+## STP and RSTP
     - Portfast
     - BPDU
     - Loop Guard
@@ -23,8 +23,8 @@
     - Link types
     - Collision Domains
     - Shared Collision Domain
-- ccna study notes - RSTP
-- ccna EIGRP
+
+## EIGRP
 
 ---
 
