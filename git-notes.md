@@ -11,8 +11,8 @@ git config user.email
 It probably shows:
 
 ```
-rayct
-codestak@proton.me
+USER
+USER.EMAIL
 ```
 
 ---
