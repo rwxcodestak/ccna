@@ -25,6 +25,8 @@
     - Shared Collision Domain
 
 ## EtherChannel
+    - Configuring Layer 2/Layer 3 EtherChannels
+    - 
 
 ---
 
