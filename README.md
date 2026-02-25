@@ -1,6 +1,6 @@
 # CCNA Networking Studies 2026
 
-- STP
+- STP and RSTP
     - BPDU
     - Loop Guard
     - Portfast
@@ -10,6 +10,10 @@
     - Port Priority
     - Redundancy
     - Forwarding
+    - PVST+
+    - Blocking
+    - Designated
+    - Alternate
 - ccna study notes - RSTP
 - ccna EIGRP
 
@@ -17,4 +21,4 @@
 
 _*Documentation by:Raymond C. Turner*_
 
-_*Date: February 24th, 2026*_
+_*Date: February 25th, 2026*_
