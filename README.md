@@ -19,6 +19,8 @@
     - Bridge Priority
     - Broadcast Storms
     - Port Priority
+    - Port roles
+    - Link types
 - ccna study notes - RSTP
 - ccna EIGRP
 
