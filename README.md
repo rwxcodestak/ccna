@@ -24,7 +24,7 @@
     - Collision Domains
     - Shared Collision Domain
 
-## EIGRP
+## EtherChannel
 
 ---
 
