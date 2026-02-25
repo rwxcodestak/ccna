@@ -26,7 +26,8 @@
 
 ## EtherChannel
     - Configuring Layer 2/Layer 3 EtherChannels
-    - 
+        - ASW1 - Access layer switch
+        - DSW1 - Distributed layer switch
 
 ---
 
