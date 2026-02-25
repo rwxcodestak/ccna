@@ -17,7 +17,8 @@
     - Alternate
     - Root Cost
     - Bridge Priority
-    - Broadcast STorms
+    - Broadcast Storms
+    - Port Priority
 - ccna study notes - RSTP
 - ccna EIGRP
 
