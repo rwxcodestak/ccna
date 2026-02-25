@@ -21,6 +21,8 @@
     - Port Priority
     - Port roles
     - Link types
+    - Collision Domains
+    - Shared Collision Domain
 - ccna study notes - RSTP
 - ccna EIGRP
 
