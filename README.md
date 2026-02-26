@@ -38,6 +38,10 @@
 
 >Traffic using the EtherChannel will be load balanced among the physical interfaces in the group. An algorithm will determine which traffic will use which physical interface.
 
+- Some other names for an EtherChannel are:
+	- Port Channel
+	- LAG (Link Aggregation Group)
+
 ---
 
 _*Documentation by: Raymond C. Turner*_
