@@ -28,6 +28,7 @@
     - Configuring Layer 2/Layer 3 EtherChannels
         - ASW1 - Access layer switch
         - DSW1 - Distributed layer switch
+> When the bandwidth of the interfaces connected to the end hosts is greater than the bandwidth of the connection to the distribution switch(es), this is called **over-subscription**. Some over-subscription is acceptable, but to much will cause congestion.
 
 ---
 
