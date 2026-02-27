@@ -42,6 +42,21 @@
 	- Port Channel
 	- LAG (Link Aggregation Group)
 
+## EtherChannel Load-Balancing
+
+- EtherChannel load balances based on 'flows'.
+- A flow is a communication between two nodes in the network.
+- Frames in the same flow will be forwarded using the same physical interface.
+- If frames in the same flow were forwarded using different physical interfaces, some frames may arrive at the destination out of order, which can cause problems.
+- you can change the inputs used in the interfaces selection calculation.
+- Inputs that can be used:
+	- Source MAC
+	- Destination MAC
+	- Source AND Destination MAC
+	- Source IP
+	- Destination IP
+	- Source AND Destination IP
+
 ---
 
 _*Documentation by: Raymond C. Turner*_
