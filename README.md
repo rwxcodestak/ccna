@@ -57,8 +57,56 @@
 	- Destination IP
 	- Source AND Destination IP
 
+
+>Example of EtherChannel setup via the cli
+>```cli
+>ASW1'show etherchannel load-balance
+>EtherChannel Load-Balancing Configuration:
+>	src-dst-ip
+>	
+>EtherChannel Load-Balancing Address Used Per-Protocol:
+>Non-IP: Source XOR Destination MAC address
+>	IPv4: Source XOR Destination IP address
+>	IPv6: Source XOR Destination IP address
+>```
+
+**Change the Load-balancing method**
+
+>ASW1#conf t
+>ASW1(config)#port-channel load-balance src-dst-mac
+>ASW1(config)#do show etherchannel load-balance
+>
+>EtherChannel Load-Balancing Configuration:
+>	src-dst-ip
+>	
+>EtherChannel Load-Balancing Address Used Per-Protocol:
+>Non-IP: Source XOR Destination MAC address
+>	IPv4: Source XOR Destination IP address
+>	IPv6: Source XOR Destination IP address
+>ASW1(config)#	
+
+
+**The two important commands to remember**
+```cli
+SW# show etherchannel load-balance
+SW(config)# port-channel load-balance *method*
+```
+
+## EtherChannel Protocols
+- There are three methods of EtherChannel configuration on Cisco switches:
+- PAgP (Port Aggregation Protocol)
+	- Cisco proprietary protocol
+	- Dynamicaly negotiates the creation/maintenance of the EtherChannel. (Like DTP does for trunks).
+- LACP (Link Aggregation Control Protocol)
+	- Industry standard protocol (IEEE 802.3ad)
+	- Dynamicaly negotiates the creation/maintenance of the EtherChannel. (Like DTP does for trunks).
+- Static EtherChannel
+	- A protocol isn't used to determine if an EtherChannel should be formed.
+	- Interfaces are statically configured to form an EtherChannel.
+- Up to 8 interfaces can be formed into a single EtherChannel (LACP allows up to 16, but only 8 will be active, the other 8 will be in standby mode, waiting for an active interface to fail)
+
 ---
 
 _*Documentation by: Raymond C. Turner*_
 
-_*Date: February 28th, 2026*_
+_*Date: March 1st, 2026*_
