@@ -19,11 +19,11 @@ USER.EMAIL
 
 # Step 2 — Set Per-Repo Identity for Notes Repo
 
-Inside the repo you want for `rayct/notes`:
+Inside the repo you want for `USER_NAME/REPO`:
 
 ```bash id="0n6m5q"
-git config user.name "rayct"
-git config user.email "rayct@icloud.com"
+git config user.name "USER_ACCOUNT_NAME"
+git config user.email "USER_ACCOUNT_EMAIL"
 ```
 
 > This overrides global Git identity **just for this repository**.
@@ -35,7 +35,7 @@ git config --get user.email
 git config --get user.name
 ```
 
-Should now show `rayct@icloud.com` and `rayct`.
+Should now show `USER_EMAIL` and `USER_ACCOUNT_NAME`.
 
 ---
 
@@ -62,7 +62,7 @@ Committer: rwxcodestak <USER.EMAIL>
 
 # Step 4 — Push to GitHub
 
-Make sure the remote is pointing to **the correct account repository** (rayct/notes):
+Make sure the remote is pointing to **the correct account repository** (ACCOUNT_NAME/REPO):
 
 ```bash id="p8g2h7"
 git remote -v
@@ -81,8 +81,8 @@ git remote set-url origin git@github-accountB:rayct/notes.git
 
 ✅ After this:
 
-* Commits will have the **correct author email** (`rayct@icloud.com`)
-* They will appear on the **rayct/notes** repository
+* Commits will have the **correct author email** (`USER_EMAIL`)
+* They will appear on the **USER_NAME/REPO_NAME** repository
 * Obsidian commits will now “register” properly
 
 ---
