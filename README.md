@@ -105,6 +105,53 @@ SW(config)# port-channel load-balance *method*
 	- Interfaces are statically configured to form an EtherChannel.
 - Up to 8 interfaces can be formed into a single EtherChannel (LACP allows up to 16, but only 8 will be active, the other 8 will be in standby mode, waiting for an active interface to fail)
 
+## PAgP Configuration
+
+- PAgP (Port Aggregation Protocol)
+	- Cisco propriety protocol
+	- Dynamically negotiates the creation/maintenance of the EtherChannel.
+		- (Like DTP does for trunks)
+- LACP (Link Aggregation Control Protocol)
+	- Industry standard protocol (IEEE 802.3ad)
+	- Dynamically negotiates the creation/maintenance of the EtherChannel.
+		- (Like DTP does for trunks)
+- Static EtherChannel
+	- A protocol isn't used to determine if an EtherChannel should be formed.
+	- Interfaces are statically
+
+- Up to 8 interfaces can be formed into a single EtherChannel (LACP allows up to 16, but only 8 will be active, the other 8 will be in standby mode, waiting for an active interface to fail)
+
+**PAgP CLi Configuration**
+
+```cli
+ASW1(config-if-range)#channel-group 1 mode ?
+	active      Enable LACP unconditionally
+	auto        Enable PAgP only if a PAgP device is detected
+	desireable  Enable Etherchannel only
+	passive     Enable LACP only if a LACP device is detected
+		
+ASW1(config-if-range)#channel-group 1 mode active
+Creating a port-channel interface Port-channel 1		
+```
+
+>The channel-group number has to match for the member interfaces on the same switch.
+>However, it **doesn't** have to match the channel-group number on the other switch.
+>**channel-group 1** on ASW1 can form an EtherChannel with **channel-group 2** on DSW1
+
+
+>Summary
+>auto + auto = no EtherChannel
+>desirable + auto = EtherChannel
+>desirable + desirable = EtherChannel
+
+>The channel-group command is used to configure the EtherChannel
+
+```cli
+SW(config-if)# **channel-group** number **mode** mode
+```
+
+## **LACP Configuration**
+
 ---
 
 _*Documentation by: Raymond C. Turner*_
