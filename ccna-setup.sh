@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-
 set -euo pipefail
 
+# ----------------------------
+# Safety Checks
+# ----------------------------
 if [ ! -d ".git" ]; then
   echo "Error: Not inside a Git repository."
   exit 1
@@ -12,27 +14,34 @@ ROOT_DIR="."
 echo "Creating CCNA structure in current repository..."
 
 # ----------------------------
-# Create directory structure
+# Directories
 # ----------------------------
+dirs=(
+  "fundamentals"
+  "networking-basics"
+  "switching"
+  "routing"
+  "services"
+  "security"
+  "labs"
+  "diagrams"
+  "meta"
+)
 
-mkdir -p "$ROOT_DIR"/{
-fundamentals,
-networking-basics,
-switching,
-routing,
-services,
-security,
-labs,
-diagrams,
-meta
-}
+for dir in "${dirs[@]}"; do
+  if [ ! -d "$ROOT_DIR/$dir" ]; then
+    mkdir -p "$ROOT_DIR/$dir"
+    echo "Created directory: $dir"
+  else
+    echo "Directory already exists: $dir"
+  fi
+done
 
 # ----------------------------
-# Create root-level files
+# Root-level files
 # ----------------------------
-
-cat > "$ROOT_DIR/README.md" <<'EOF'
-# CCNA Study Repository
+declare -A files
+files["README.md"]="# CCNA Study Repository
 
 Structured, version-controlled CCNA study notes.
 
@@ -59,11 +68,9 @@ This repository treats documentation as production-grade technical material.
 Routing      [░░░░░░░░░░]
 Switching    [░░░░░░░░░░]
 Security     [░░░░░░░░░░]
+"
 
-EOF
-
-cat > "$ROOT_DIR/CONTRIBUTING.md" <<'EOF'
-# Contribution Guidelines
+files["CONTRIBUTING.md"]="# Contribution Guidelines
 
 ## Branch Naming
 
@@ -84,19 +91,17 @@ Use Conventional Commits:
 ## Documentation Template
 
 All topic files must follow the standard template structure.
-EOF
+"
 
-cat > "$ROOT_DIR/CHANGELOG.md" <<'EOF'
-# Changelog
+files["CHANGELOG.md"]="# Changelog
 
 All notable changes to this project will be documented here.
 
 ## [Unreleased]
 - Initial repository structure
-EOF
+"
 
-cat > "$ROOT_DIR/.gitignore" <<'EOF'
-# OS
+files[".gitignore"]="# OS
 .DS_Store
 Thumbs.db
 
@@ -106,14 +111,27 @@ Thumbs.db
 
 # Logs
 *.log
-EOF
+"
+
+for f in "${!files[@]}"; do
+  if [ ! -f "$ROOT_DIR/$f" ]; then
+    echo "${files[$f]}" > "$ROOT_DIR/$f"
+    echo "Created file: $f"
+  else
+    echo "File already exists: $f"
+  fi
+done
 
 # ----------------------------
-# Markdown Topic Template
+# Topic Template Function
 # ----------------------------
-
-create_topic_file () {
+create_topic_file() {
   local filepath="$1"
+  if [ -f "$filepath" ]; then
+    echo "File already exists: $filepath"
+    return
+  fi
+
   cat > "$filepath" <<'EOF'
 # Topic Name
 
