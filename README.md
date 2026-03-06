@@ -3,7 +3,8 @@
 Routing      [███████░░░] 70%
 Switching    [█████░░░░░] 50%
 Security     [███░░░░░░░] 30%
-
+Automation
+Ai
 
 
 ---
