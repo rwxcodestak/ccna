@@ -21,5 +21,8 @@ Use Conventional Commits:
 >[!Note]
 >Take Note
 
+>[!Warning]
+>Warning don't install yet
+
 All topic files must follow the standard template structure.
 
