@@ -18,5 +18,8 @@ Use Conventional Commits:
 
 ## Documentation Template
 
+>[!Note]
+>Take Note
+
 All topic files must follow the standard template structure.
 
