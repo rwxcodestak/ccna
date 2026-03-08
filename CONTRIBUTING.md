@@ -26,3 +26,4 @@ Use Conventional Commits:
 
 All topic files must follow the standard template structure.
 
+_**Documentation maintained by: Raymond C. Turner**_
